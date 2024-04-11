@@ -1,9 +1,10 @@
+import express from 'express';
+
 const a = 5;
 
 for (let i = 0; i < a; i++) {
   console.log(i);
 }
-import express from 'express';
 
 const app = express();
 
