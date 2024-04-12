@@ -1,8 +1,7 @@
 import express from 'express';
+import dotenv from 'dotenv';
 
-const a = 5;
-
-for (let i = 0; i < a; i++) {
+for (let i = 0; i < 5; i++) {
   console.log(i);
 }
 
@@ -12,6 +11,10 @@ app.get('/', (_req, res) => {
   res.send('Hello World!');
 });
 
-app.listen(3000, () => {
+dotenv.config();
+
+const port = process.env.PORT;
+
+app.listen(port, () => {
   console.log('Server started on port 3000');
 });
